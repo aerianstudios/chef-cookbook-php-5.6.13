@@ -19,12 +19,12 @@ bash "custom_php-ini_settings_post_max_size" do
   EOS
 end
 
-bash "custom_php-ini_settings_timezone" do
-  user "root"
-  code <<-EOS
-    sed -i "s/;date.timezone =/date.timezone = Europe\/London/" /etc/php5/apache2/php.ini
-  EOS
-end
+#bash "custom_php-ini_settings_timezone" do
+#  user "root"
+#  code <<-EOS
+#    sed -i "s/;date.timezone =/date.timezone = Europe\/London/" /etc/php5/apache2/php.ini
+#  EOS
+#end
 
 bash "custom_php-ini_settings_upload_max_filesize" do
   user "root"

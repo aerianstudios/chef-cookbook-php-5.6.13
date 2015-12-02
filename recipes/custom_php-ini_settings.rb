@@ -22,7 +22,7 @@ end
 bash "custom_php-ini_settings_timezone" do
   user "root"
   code <<-EOS
-    sed -i "s/date.timezone = /date.timezone = Europe/London/" /etc/php5/apache2/php.ini
+    sed -i "s/;date.timezone =/date.timezone = Europe\/London/" /etc/php5/apache2/php.ini
   EOS
 end
 
